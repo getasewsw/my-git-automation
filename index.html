@@ -1,12 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sample HTML File</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 1rem 0;
+        }
+        section {
+            padding: 1rem 0;
+        }
+        h1, h2 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            margin-bottom: 0.75rem;
+        }
+        .steps {
+            list-style: decimal;
+            padding-left: 2rem;
+        }
+        .steps li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Hello, World!</h1>
-<p>This is a sample HTML file.</p>
+    <header>
+        <h1>CI/CD with GitHub Actions Demo</h1>
+    </header>
+
+    <div class="container">
+        <section id="what-is-ci-cd">
+            <h2>What is CI/CD?</h2>
+            <p>
+                <strong>CI/CD</strong> stands for <strong>Continuous Integration/Continuous Deployment</strong>.
+                It's a practice that automates the software release process, from code integration to deployment.
+            </p>
+            <p>
+                <strong>Continuous Integration (CI)</strong> involves automatically building and testing code changes
+                whenever new code is committed to a shared repository.
+            </p>
+            <p>
+                <strong>Continuous Deployment (CD)</strong> automates the release of validated code to the production environment.
+            </p>
+        </section>
+
+        <section id="github-actions">
+            <h2>GitHub Actions for CI/CD</h2>
+            <p>
+                <a href="https://github.com/features/actions">GitHub Actions</a> is a CI/CD platform that allows you to automate your build,
+                test, and deployment pipeline.
+            </p>
+        </section>
+
+        <section id="steps-to-automate">
+            <h2>Steps to Automate with GitHub Actions</h2>
+            <ol class="steps">
+                <li><strong>Create a Repository:</strong> Start by creating a new repository on GitHub.</li>
+                <li><strong>Define Workflow:</strong> Create a <code>.github/workflows</code> directory and define your workflow in a YAML file (e.g., <code>main.yml</code>).</li>
+                <li><strong>Configure Workflow:</strong>
+                    <ul>
+                        <li>Specify the trigger events (e.g., <code>push</code>, <code>pull_request</code>).</li>
+                        <li>Define jobs to be executed (e.g., build, test, deploy).</li>
+                        <li>Configure steps for each job (e.g., checkout code, set up environment, run tests, deploy).</li>
+                    </ul>
+                </li>
+                <li><strong>Commit and Push:</strong> Commit the changes and push them to your repository.</li>
+                <li><strong>Monitor:</strong> Monitor the workflow execution in the "Actions" tab of your repository.</li>
+            </ol>
+        </section>
+    </div>
 
 </body>
 </html>
